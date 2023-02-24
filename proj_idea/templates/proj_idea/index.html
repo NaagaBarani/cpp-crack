@@ -1,0 +1,10 @@
+<h1>Newest Projects<h1>
+{% if newest_proj %}
+<ul>
+{% for movie in newest_proj %}
+<li><a href="{% url 'proj_idea:show' proj_idea.id %}">{{ proj_idea.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p>There are no projects recorded.</p>
+{% endif %}
